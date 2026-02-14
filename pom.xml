@@ -56,7 +56,7 @@
                                 <plugin>
                                     <groupId>com.h3xstream.findsecbugs</groupId>
                                     <artifactId>findsecbugs-plugin</artifactId>
-                                    <version>1.13.0</version>
+                                    <version>1.14.0</version>
                                 </plugin>
                             </plugins>
                         </configuration>
@@ -610,7 +610,7 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
+            <version>8.0.1</version>
             <scope>provided</scope>
         </dependency>
 
@@ -624,7 +624,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.16.1</version>
+            <version>1.21.0</version>
         </dependency>
 
         <!-- mvn dependency:analyze says this is an unused declared dependency, but its wrong. Get this runtime error if it's not included: Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.commons.dbcp.BasicDataSource] for bean with name 'dataSource' defined in class path resource [context.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.commons.dbcp.BasicDataSource -->
@@ -637,7 +637,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.16.1</version>
+            <version>2.21.0</version>
         </dependency>
 
         <dependency>
@@ -651,7 +651,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-reload4j</artifactId>
-            <version>2.0.13</version>
+            <version>2.0.17</version>
         </dependency>
 
         <dependency>
@@ -765,13 +765,13 @@
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>
             <artifactId>httpclient5</artifactId>
-            <version>5.3.1</version>
+            <version>5.6</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.httpcomponents.core5</groupId>
             <artifactId>httpcore5</artifactId>
-            <version>5.2.4</version>
+            <version>5.4.1</version>
         </dependency>
 
         <dependency>
@@ -804,13 +804,13 @@
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>2.7.2</version>
+            <version>2.7.4</version>
         </dependency>
 
         <dependency>
             <groupId>org.owasp.esapi</groupId>
             <artifactId>esapi</artifactId>
-            <version>2.5.3.1</version>
+            <version>2.7.0.0</version>
         </dependency>
 
         <dependency>
@@ -851,6 +851,11 @@
             <version>1.4.01</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.21.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -860,7 +865,7 @@
             <extension>
                 <groupId>co.leantechniques</groupId>
                 <artifactId>maven-buildtime-extension</artifactId>
-                <version>3.0.3</version>
+                <version>3.0.5</version>
             </extension>
         </extensions>
 
@@ -875,17 +880,17 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.7.1</version>
+                    <version>3.8.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.10.0</version>
                     <configuration>
                         <usedDependencies>
                             <dependency>com.sun.jersey:jersey-servlet</dependency>
@@ -899,7 +904,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.3.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -913,13 +918,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.3.2</version>
+                <version>3.5.0</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.15.0</version>
                 <configuration>
                     <fork>true</fork>
                     <meminitial>1000m</meminitial>
@@ -931,18 +936,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.1.4</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.4.1</version>
+                <version>3.6.2</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>extra-enforcer-rules</artifactId>
-                        <version>1.8.0</version>
+                        <version>1.11.0</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -982,44 +987,44 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-help-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.5.1</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.1.4</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.3.2</version>
+                <version>3.6.0</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.21.2</version>
+                <version>3.28.0</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>3.9.0</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.4.0</version>
             </plugin>
 
             <plugin>
                 <!-- Note: This uses the maven-fluido-skin version specified next. The skin is referenced in src/site/site.xml. -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>4.0.0-M13</version>
+                <version>3.21.0</version>
                 <dependencies>
                     <!-- Explicitly declare these dependencies so the versions plugin and library bots will flag available updates. The fluido-skin plugin is referenced in src/site/site.xml using the same fluido version property. -->
                     <dependency>
@@ -1033,13 +1038,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>3.5.4</version>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.5.1</version>
                 <configuration>
                     <webXml>${maven.war.webxml}</webXml>
                 </configuration>
@@ -1048,13 +1053,13 @@
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven3-plugin</artifactId>
-                <version>1.10.12</version>
+                <version>1.10.26</version>
             </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.16.2</version>
+                <version>2.21.0</version>
             </plugin>
 
             <!-- SpotBugs Static Analysis - the successor to FindBugs -->
@@ -1081,13 +1086,13 @@
                 <groupId>com.h3xstream.findsecbugs</groupId>
                 <artifactId>findsecbugs-plugin</artifactId>
                 <!-- You MUST update the plugin version used in findsecbugs profile, so these versions match. You can't define/use a versions.findsecbugs property because it breaks the naming of the findsecbugs results file. -->
-                <version>1.13.0</version>
+                <version>1.14.0</version>
             </plugin>
 
             <plugin>
                 <groupId>com.internetitem</groupId>
                 <artifactId>write-properties-file-maven-plugin</artifactId>
-                <version>1.0.1</version>
+                <version>2.0.0</version>
             </plugin>
 
             <plugin>
@@ -1099,7 +1104,7 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>2.43.0</version>
+                <version>3.2.1</version>
                 <configuration>
                     <!-- optional: limit format enforcement to just the files changed by this feature branch -->
                     <ratchetFrom>origin/master</ratchetFrom>
@@ -1164,7 +1169,7 @@
 
                         <!-- apply a specific flavor of google-java-format -->
                         <googleJavaFormat>
-                            <version>1.8</version>
+                            <version>1.17.0</version>
                             <style>AOSP</style>
                         </googleJavaFormat>
                     </java>
@@ -1239,18 +1244,18 @@
         </tomcat.jvmargs.debug>
         <log.directory>${project.build.directory}/log</log.directory>
 
-        <version.apache.api-ldap>2.1.6</version.apache.api-ldap>
+        <version.apache.api-ldap>2.1.7</version.apache.api-ldap>
         <version.apacheds>2.0.0.AM27</version.apacheds>
-        <version.fluido>2.0.0-M8</version.fluido>
+        <version.fluido>2.1.0</version.fluido>
         <!-- hibernate is up to rev 6+. But 4.0.0. causes this error: symbol: org.hibernate.classic.Session not found -->
         <version.hibernate>3.6.10.Final</version.hibernate>
-        <version.spotbugs.maven>4.8.4.0</version.spotbugs.maven>
-        <version.spotbugs>4.8.4</version.spotbugs>
+        <version.spotbugs.maven>4.9.8.2</version.spotbugs.maven>
+        <version.spotbugs>4.9.8</version.spotbugs>
         <!-- Spring 6.x requires Java 17 -->
-        <version.springframework>5.3.34</version.springframework>
+        <version.springframework>5.3.39</version.springframework>
         <!-- Tomcat 10 moves from Java EE to Jakarta EE, moving packages javax.* to jakarta.* - code changes likely required to address this change. -->
         <tomcat.major.version>9</tomcat.major.version>
-        <version.tomcat>9.0.87</version.tomcat>
+        <version.tomcat>9.0.113</version.tomcat>
         <tomcat.url>https://archive.apache.org/dist/tomcat/tomcat-${tomcat.major.version}/v${version.tomcat}/bin/apache-tomcat-${version.tomcat}.zip</tomcat.url>
     </properties>
 
